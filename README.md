@@ -5,6 +5,6 @@ Dans le terminal taper :
 ```
 git clone https://github.com/BoOz/gupf.git
 cd gupf/config
-chmod +x docteur.sh
+chmod +x install.sh
 ```
 Puis glisser install.sh dans le terminal et valider.
