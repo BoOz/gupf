@@ -9,7 +9,7 @@ chmod +x install.sh
 ./install.sh
 ```
 
-Si besoin relancer l'intallation en glissant `install.sh` dans le terminal.
+Si besoin relancer l'installation en glissant `install.sh` dans le terminal.
 
 Mise à jour : 
 ```
