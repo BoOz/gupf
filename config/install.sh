@@ -5,8 +5,14 @@
 # chmod +x install.sh
 # puis glisser install.sh dans le terminal et valider.
 
-echo "\nVérification de la configuration des scripts de gestion des utilisateurs par fichiers.\n\n"
+clear
 
-echo "Installation OK.\n"
+echo "***************************************"
+echo "Gestion des utilisateurs par fichiers."
+echo "***************************************"
+
+echo "\nVérification de la configuration des scripts : "
+echo "- Installation OK."
+echo "\n\n\n\n"
 
 
