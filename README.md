@@ -1,5 +1,9 @@
 # gupf
-Commandes dans le terminal sur des fichiers de données.
+Commandes dans le terminal.
+
+`dedup fichier1 fichier2` : les lignes de fichier1 qui ne sont pas dans fichier2
+...
+
 
 **Installation**
 
