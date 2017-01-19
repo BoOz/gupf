@@ -1,5 +1,5 @@
 # gupf
-Gestion des utilisateurs par fichiers dans le terminal.
+Commandes dans le terminal sur des fichiers de données.
 
 **Installation**
 
