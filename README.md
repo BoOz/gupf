@@ -21,5 +21,6 @@ Si besoin relancer l'installation en glissant `install.sh` dans le terminal.
 **Mise à jour :**
 ```
 git pull
+./config/install.sh
 ```
 
