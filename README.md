@@ -6,7 +6,7 @@ Commandes dans le terminal.
 ...
 
 
-**Installation**
+**Installation avec Git**
 
 Dans le terminal taper la première fois :
 ```
