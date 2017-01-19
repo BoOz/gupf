@@ -1,7 +1,7 @@
 # gupf
 Commandes dans le terminal.
 
-`dedup fichier1 fichier2` : les lignes de `fichier1` qui ne sont pas dans `fichier2`
+`dedup fichier1 [fichier2]` : emails dans `fichier1` [mais pas dans `fichier2`]. `fichier1` est formaté, dédoublonné et trié.
 
 ...
 
