@@ -11,7 +11,7 @@ chmod +x config/install.sh
 ./config/install.sh
 ```
 
-Si besoin relancer l'installation en glissant `config/install.sh` dans le terminal.
+Si besoin relancer l'installation en glissant `./config/install.sh` dans le terminal.
 
 **Mise à jour :**
 ```
