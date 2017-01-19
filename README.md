@@ -10,3 +10,6 @@ chmod +x install.sh
 ```
 
 Si besoin relancer l'intallation en glissant `install.sh` dans le terminal.
+
+Mise à jour : 
+`git pull`
