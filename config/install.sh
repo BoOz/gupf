@@ -24,7 +24,7 @@ for c in $(find $repertoire/commandes/*); do
 	echo "- $commande"
 
 	# La commande est-elle installée ?
-	echo "Ajouter la commande $commande à votre profil dans le terminal en copiant"
+	echo "\nAjouter la commande $commande à votre profil dans le terminal en copiant"
 	echo "alias dedup=\"$repertoire/commandes/dedup.sh\""
 	echo "dans le fichier $HOME/.bash_profile. \nPasser en mode édition en tapant i puis esc :wq pour sauvegarder"
 	echo "vim $HOME/.bash_profile\n"
