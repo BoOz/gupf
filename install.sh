@@ -15,7 +15,6 @@ echo "\nVérification des commandes.\n"
 
 # Ou sommes nous ?
 repertoire=${0%/*}
-repertoire=${repertoire/\/config/}
 
 echo "Commandes disponibles : "
 for c in $(find $repertoire/commandes/*); do

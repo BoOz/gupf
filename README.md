@@ -13,7 +13,7 @@ Dans le terminal taper la première fois :
 git clone https://github.com/BoOz/gupf.git
 cd gupf
 chmod +x config/install.sh
-./config/install.sh
+./install.sh
 ```
 
 Si besoin relancer l'installation en glissant `install.sh` dans le terminal.
@@ -22,6 +22,6 @@ Si besoin relancer l'installation en glissant `install.sh` dans le terminal.
 ```
 cd la/ou/est/gupf
 git pull
-./config/install.sh
+./install.sh
 ```
 
