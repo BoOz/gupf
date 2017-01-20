@@ -10,8 +10,8 @@ Commandes dans le terminal.
 
 Dans le terminal taper la première fois :
 ```
-git clone https://github.com/BoOz/gupf.git
-cd gupf
+git clone https://github.com/BoOz/terminal.git
+cd terminal
 chmod +x install.sh
 ./install.sh
 ```
@@ -20,7 +20,7 @@ Si besoin relancer l'installation en glissant `install.sh` dans le terminal.
 
 **Mise à jour :**
 ```
-cd la/ou/est/gupf
+cd la/ou/est/terminal
 git pull
 ./install.sh
 ```
