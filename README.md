@@ -1,5 +1,4 @@
-# gupf
-Commandes dans le terminal.
+# Commandes disponibles dans le terminal.
 
 `dedup fichier1 [fichier2]` : emails dans `fichier1` [mais pas dans `fichier2`]. `fichier1` est formaté, dédoublonné et trié.
 
