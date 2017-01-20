@@ -1,7 +1,6 @@
 #!/bin/sh
 
-# Dans le terminal taper :
-# cd gupf/config
+# Dans le terminal  la premiere fois taper :
 # chmod +x install.sh
 # puis glisser install.sh dans le terminal et valider.
 
