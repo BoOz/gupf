@@ -22,13 +22,14 @@ for c in $(find $repertoire/commandes/*); do
 	echo "- $commande"
 
 	# La commande est-elle installée ?
-	echo "\nAjouter la commande $commande à votre profil dans le terminal en copiant"
+	echo "Ajouter la commande $commande à votre profil dans le terminal en copiant dans le fichier $HOME/.bash_profile."
 	echo "alias dedup=\"$repertoire/commandes/dedup.sh\""
-	echo "dans le fichier $HOME/.bash_profile. \nPasser en mode édition en tapant i puis esc :wq pour sauvegarder"
+	echo "Passer en mode édition en tapant i puis esc :wq pour sauvegarder"
 	echo "vim $HOME/.bash_profile\n"
 
 	echo "Relancer le terminal"
 	echo ". $HOME/.bash_profile\n"
+	# . $HOME/.bash_profile
 
 	echo "Usage : "
 	echo "$commande fichier1.txt fichier2.txt"
@@ -36,6 +37,6 @@ for c in $(find $repertoire/commandes/*); do
 done
 
 echo "\n- Installation OK."
-echo "\n\n\n\n"
+echo "\n\n"
 
 
