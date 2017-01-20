@@ -12,7 +12,7 @@ Dans le terminal taper la première fois :
 ```
 git clone https://github.com/BoOz/gupf.git
 cd gupf
-chmod +x config/install.sh
+chmod +x install.sh
 ./install.sh
 ```
 
