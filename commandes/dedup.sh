@@ -23,7 +23,11 @@ repertoire_details="${nom_fichier_original}_details"
 # Dédupliquer les adresses emails d'un fichier `emails.txt`, une adresse email par ligne.
 
 # On enleve les desinscrits sur listes rouges
-# set "$*" "$liste_rouge" "rien"
+if [ -f "$repertoire/desinscrits.config" ] ; then
+	source "$repertoire/desinscrits.config"
+	# echo ">>> $liste_rouge"
+	set "$*" "$liste_rouge" "liste_rouge2"
+fi
 
 # vérif
 # echo ">$*<"
@@ -38,7 +42,7 @@ index=0
 for f in "$@" ; do 
 		
 		((${#f} == 0)) && continue
-		[ ! -f ${f} ] && continue
+		[ ! -f "${f}" ] && continue
 
 		# Nettoyer la liste (emails invalides)
 		nbl=$(($(wc -l < "$f")))
