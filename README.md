@@ -2,7 +2,7 @@
 
 **dedup**
 
-`dedup fichier1 [fichier2]` : emails dans `fichier1` [mais pas dans `fichier2`]. `fichier1` est formaté, dédoublonné et trié.
+`dedup fichier1 [fichier2]` : créé un fichier avec les emails dans `fichier1` [mais pas dans `fichier2`]. Le fichier est formaté, dédoublonné et trié.
 
 ...
 
