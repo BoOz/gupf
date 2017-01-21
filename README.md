@@ -1,4 +1,4 @@
-# Commandes en plus dans le terminal.
+# Commandes en plus dans le terminal
 
 **dedup**
 
