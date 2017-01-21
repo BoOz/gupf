@@ -19,7 +19,7 @@ chmod +x install.sh
 
 Si besoin relancer l'installation en glissant `install.sh` dans le terminal.
 
-** Dépendances **
+**Dépendances**
 
 Sous MacOS installer aussi
 `brew install coreutils`
