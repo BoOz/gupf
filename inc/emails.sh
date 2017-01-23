@@ -26,6 +26,7 @@ function nettoyer_liste_emails(){
 	invalide="@-"
 
 	# le fichier est il une liste d'emails bien formatées ?
+	touch "${nom_fichier}--KO.txt"
 	cat "$1" | while read line 
 		do
 			#echo $line
@@ -58,7 +59,7 @@ function nettoyer_liste_emails(){
 	
 	# compter les lignes
 	nb_lignes=$(cat "${nom_fichier}--KO.txt" | wc -l | tr -d ' ')
-	nouveau_nom="${nom_fichier}-${nb_lignes/\t/}-KO.txt"
+	nouveau_nom="${nom_fichier}-${nb_lignes}-KO.txt"
 	mv "${nom_fichier}--KO.txt" "$nouveau_nom"
 
 	nb_lignes=$(cat "${nom_fichier}--valides.txt" | wc -l | tr -d ' ')
