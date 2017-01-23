@@ -4,7 +4,6 @@
 
 # compare deux fichiers et recrache le fichier A dédupliqué du fichier B.
 # détecte au passage des doublons dans a ou b.
-# si pas de second fichier on estime que c'est avec les desisnscrits qu'on dedup.
 
 # il faut des fichiers avec une nouvelle ligne à chaque fin de ligne, meme la derniere
 # essayer ca ?
@@ -24,10 +23,11 @@ function nettoyer_liste_emails(){
 	non_regex="@"
 	# tester si le domaine est valide   06lol@-ac-machin.fr
 	invalide="@-"
+	touch "${nom_fichier}--KO.txt"
 
 	# le fichier est il une liste d'emails bien formatées ?
-	touch "${nom_fichier}--KO.txt"
-	cat "$1" | while read line 
+	# attention aux fichiers Mac avec des fins de lignes CR ou aux Windows CRLF => transformer tout ca en LF.
+	cat "$1" | nettoyer_sauts_de_lignes | while read line 
 		do
 			#echo $line
 			if [[  "$line" =~ $regex || ! $line =~ $non_regex || $line =~ $invalide ]]

@@ -11,18 +11,22 @@ fi
 # Ou sommes-nous ?
 repertoire=${0%/*}
 repertoire=${repertoire/\/commandes/}
+source "$repertoire/inc/utils.sh"
 source "$repertoire/inc/emails.sh"
 
 # Quel fichier veut-on dédupliquer ?
 fichier_original=$(realpath "$1")
 nom_fichier_original="${fichier_original%.*}"
-# sera dispo dans les script inclus
+
+# Définir un repertoire à coté du fichier maitre pour mettre le détail des opérations. Il sera dispo dans les script inclus
 repertoire_dedup="${nom_fichier_original}_dedup"
 [ ! -d "$repertoire_dedup" ] && mkdir "$repertoire_dedup"
+# vider le répertoire si besoin.
 (( $(ls "$repertoire_dedup" | wc -l | tr -d ' ') > 0 )) && rm "${repertoire_dedup}"/*
 
 # Dédupliquer les adresses emails d'un fichier `emails.txt`, une adresse email par ligne.
 
+# En option on peut forcer la déduplication sur des listes rouges définies dans desinscrits.config.
 # On enleve les desinscrits sur listes rouges
 if [ -f "$repertoire/desinscrits.config" ] ; then
 	source "$repertoire/desinscrits.config"
@@ -49,7 +53,7 @@ for f in "$@" ; do
 		[ ! -f "${f}" ] && continue
 
 		# Nettoyer la liste (emails invalides)
-		nbl=$(($(wc -l < "$f")))
+		nbl=$(cat "$f" | nettoyer_sauts_de_lignes | wc -l | tr -d ' ')
 		echo  "\nEvaluation des emails dans $f ($nbl lignes)"
 		nettoyer_liste_emails "$f"	
 		nb=$(wc -l < "${liste_propre}")
