@@ -17,8 +17,9 @@ source "$repertoire/inc/emails.sh"
 fichier_original=$(realpath "$1")
 nom_fichier_original="${fichier_original%.*}"
 # sera dispo dans les script inclus
-repertoire_details="${nom_fichier_original}_details"
-[ ! -d "$repertoire_details" ] && mkdir "$repertoire_details"
+repertoire_dedup="${nom_fichier_original}_dedup"
+[ ! -d "$repertoire_dedup" ] && mkdir "$repertoire_dedup"
+(( $(ls "$repertoire_dedup" | wc -l | tr -d ' ') > 0 )) && rm "${repertoire_dedup}"/*
 
 # Dédupliquer les adresses emails d'un fichier `emails.txt`, une adresse email par ligne.
 
@@ -26,11 +27,14 @@ repertoire_details="${nom_fichier_original}_details"
 if [ -f "$repertoire/desinscrits.config" ] ; then
 	source "$repertoire/desinscrits.config"
 	# echo ">>> $liste_rouge"
-	set "$*" "$liste_rouge" "liste_rouge2"
+	set "$*" "$liste_rouge" "$liste_rouge2"
 fi
 
 # vérif
-# echo ">$*<"
+#for f in "$@" ; do 
+#	echo ">$f<"
+#done
+
 
 
 # Chercher des doublons
@@ -85,7 +89,7 @@ while (( $taquet < ${#fichiers_dedoublonnes[@]} ))
 do
 	((${#f} == 0)) && continue
 	echo  "\nComparaison de ${fichier_dedup} ($(($(wc -l < "${fichier_dedup}"))) lignes) et ${fichiers_dedoublonnes[$taquet]} ($(($(wc -l < "${fichiers_dedoublonnes[$taquet]}"))) lignes)"
-	dedupliquer ${fichier_dedup} ${fichiers_dedoublonnes[$taquet]}
+	dedupliquer "${fichier_dedup}" "${fichiers_dedoublonnes[$taquet]}"
 	# vars définies dans le script sourcé
 	nb_paires=`wc -l < "${fichier_communs}"`
 	nb_dedup=`wc -l < "${fichier_dedup}"`
@@ -94,7 +98,7 @@ done
 
 
 
-fichier_final="$nom_fichier_original-dedup-ok.txt"
+fichier_final="$nom_fichier_original-dedup.txt"
 cp "${fichier_dedup}" "$fichier_final"
 
 echo  "\nFichier final : ${fichier_final##*/} ($(($(wc -l < "$fichier_final"))) lignes), $(( $(($(wc -l < "$1"))) - $(($(wc -l < "$fichier_final"))) )) lignes enlevées."

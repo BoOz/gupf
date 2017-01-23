@@ -2,9 +2,10 @@
 
 **dedup**
 
-`dedup fichier1 [fichier2]` : créé un fichier avec les emails dans `fichier1` [mais pas dans `fichier2`]. Le fichier est formaté, dédoublonné et trié.
+`dedup fichier1 [fichier2]` : créé un fichier avec les emails dans `fichier1` [mais pas dans `fichier2`]. Les doublons et les adresses invalides sont retirés.
 
-...
+
+**...**
 
 
 **Installation avec Git**
@@ -21,7 +22,7 @@ Si besoin relancer l'installation en glissant `install.sh` dans le terminal.
 
 **Dépendances**
 
-Sous MacOS installer aussi
+Sous MacOSX installer aussi
 `brew install coreutils`
 
 **Mise à jour :**

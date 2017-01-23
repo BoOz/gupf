@@ -14,10 +14,10 @@
 
 function nettoyer_liste_emails(){
 
-	# $repertoire_details est définie dans le script dedup.sh
+	# $repertoire_dedup est défini dans le script appelant dedup.sh
 	nom_fichier_relatif="${1##*/}"
 	nom_fichier_relatif="${nom_fichier_relatif%.*}"
-	nom_fichier="$repertoire_details/${nom_fichier_relatif}"
+	nom_fichier="$repertoire_dedup/${nom_fichier_relatif}"
 
 	# Trouver des emails
 	regex="[\(\(\[\[, <>|:;^]|\.\."
@@ -25,19 +25,13 @@ function nettoyer_liste_emails(){
 	# tester si le domaine est valide   06lol@-ac-machin.fr
 	invalide="@-"
 
-	# Ménage
-	for i in "emails_valides" "emails_invalides"
-	do
-		[ -f "$nom_fichier-$i.txt" ] && rm "$nom_fichier-$i.txt"
-	done
-
 	# le fichier est il une liste d'emails bien formatées ?
 	cat "$1" | while read line 
 		do
 			#echo $line
 			if [[  "$line" =~ $regex || ! $line =~ $non_regex || $line =~ $invalide ]]
 				then
-					echo "$line " >> "$nom_fichier-emails_invalides.txt"
+					echo "$line " >> "${nom_fichier}--KO.txt"
 				else
 					# on ne veut pas deux @
 					m="${line//@/}"
@@ -48,21 +42,31 @@ function nettoyer_liste_emails(){
 					tld="${domaine##*.}"  #.net
 					if [[ "$domaine" == "$tld" || "${line%%@*}" == "" ]] # pas de .tld à la fin || pas de truc avant le @
 						then
-							echo "$line" >> "$nom_fichier-emails_invalides.txt"
+							echo "$line" >> "${nom_fichier}--KO.txt"
 						else
 							if (( ${#line} < 3 || ${#tld} < 2 || ${n} > 1))
 								then
-									echo "$line" >> "$nom_fichier-emails_invalides.txt"
+									echo "$line" >> "${nom_fichier}--KO.txt"
 								else
 									# email valide
 									# echo "$baserep // $line"
-									echo "$line" >> "$nom_fichier-emails_valides.txt"
+									echo "$line" >> "${nom_fichier}--valides.txt"
 							fi
-					fi				
+					fi
 			fi
 	done
+	
+	# compter les lignes
+	nb_lignes=$(cat "${nom_fichier}--KO.txt" | wc -l | tr -d ' ')
+	nouveau_nom="${nom_fichier}-${nb_lignes/\t/}-KO.txt"
+	mv "${nom_fichier}--KO.txt" "$nouveau_nom"
 
-	liste_propre="$nom_fichier-emails_valides.txt"
+	nb_lignes=$(cat "${nom_fichier}--valides.txt" | wc -l | tr -d ' ')
+	nouveau_nom="${nom_fichier}-${nb_lignes/\t/}-valides.txt"
+	mv "${nom_fichier}--valides.txt" "$nouveau_nom"
+	
+	# renvoi au script appelant
+	liste_propre="$nouveau_nom"
 }
 
 function dedoublonner_liste(){
@@ -70,37 +74,54 @@ function dedoublonner_liste(){
 	# $repertoire_details est définie dans le script dedup.sh
 	nom_fichier_relatif="${1##*/}"
 	nom_fichier_relatif="${nom_fichier_relatif%.*}"
-	nom_fichier="$repertoire_details/${nom_fichier_relatif}"
+	nom_fichier_relatif="${nom_fichier_relatif%.*}"
+	# virer le compte d'adresses valides
+	menage=$(echo "$nom_fichier_relatif" | grep -Eo "\d+-valides")
+	nom_fichier_relatif=${nom_fichier_relatif/$menage/}
 
-	# generer la liste des emails dédoublonnés, en uniformisant la casse
-	for i in "dedoublonne" "doublons"
-	do
-		if [ -f "$nom_fichier-$i.txt" ]
-			 then rm "$nom_fichier-$i.txt"
-		fi
-	done
+	nom_fichier="$repertoire_dedup/${nom_fichier_relatif}"
 	
 	export LC_ALL=C # trier correctement
 	cat "$1" | tr '[A-Z]' '[a-z]' | sort | uniq > "$nom_fichier-dedoublonne.txt"
 	cat "$1" | sort -f | uniq -i -d > "$nom_fichier-doublons.txt"
-	
-	liste_dedoublonnee="$nom_fichier-dedoublonne.txt"
+
+	# compter les lignes
+	nb_lignes=$(cat "$nom_fichier-doublons.txt" | wc -l | tr -d ' ')
+	nouveau_nom="${nom_fichier}-${nb_lignes}-doublons.txt"
+	mv "$nom_fichier-doublons.txt" "$nouveau_nom"
+
+	nb_lignes=$(cat "$nom_fichier-dedoublonne.txt" | wc -l | tr -d ' ')
+	nouveau_nom="${nom_fichier}-${nb_lignes}-dedoublonne.txt"
+	mv "$nom_fichier-dedoublonne.txt" "$nouveau_nom"
+
+	# renvoi au script appelant
+	liste_dedoublonnee="$nouveau_nom"
 }
 
 function dedupliquer(){
-	 # Prendre deux fichiers et renvoyer la liste des adresses qui sont dans le premier mais pas dans le second.
+	# Prendre deux fichiers et renvoyer la liste des adresses qui sont dans le premier mais pas dans le second.
 	# $repertoire_details est définie dans le script dedup.sh
 	nom_fichier_relatif="${1##*/}"
 	nom_fichier_relatif="${nom_fichier_relatif%.*}"
-	nom_fichier="$repertoire_details/${nom_fichier_relatif}"
+	
+	# virer le compte d'adresses valides
+	menage=$(echo "$nom_fichier_relatif" | grep -Eo "\d+-dedup")
+	nom_fichier_relatif=${nom_fichier_relatif/$menage/}
+	menage=$(echo "$nom_fichier_relatif" | grep -Eo "\d+-dedoublonne")
+	nom_fichier_relatif=${nom_fichier_relatif/$menage/}
+	nom_fichier="$repertoire_dedup/${nom_fichier_relatif}"
 	
 	# Ou sommes-nous ?
 	nom_fichier2=${2##*/}
 	nom_fichier2="${nom_fichier2%.*}"
+	menage=$(echo "$nom_fichier2" | grep -Eo "\d+-dedup")
+	nom_fichier2=${nom_fichier2/$menage/}
+	menage=$(echo "$nom_fichier2" | grep -Eo "\d+-dedoublonne")
+	nom_fichier2=${nom_fichier2/$menage/}
 	
-	fichier_communs="$nom_fichier--$nom_fichier2--communs.txt"
+	fichier_communs="$nom_fichier-$nom_fichier2-communs.txt"
 	[ -f "$fichier_communs" ] && rm "$fichier_communs"
-	fichier_dedup="$nom_fichier--$nom_fichier2--dedup.txt"
+	fichier_dedup="$nom_fichier-$nom_fichier2-dedup.txt"
 	[ -f "$fichier_dedup" ] && rm "$fichier_dedup"
 
  if [ -f "$1" ] && [ -f "$2" ] ; then
@@ -110,6 +131,19 @@ function dedupliquer(){
 			
 	# Afficher les  lignes  se  trouvant  dans  fichier1  et  pas  dans fichier2	
 	comm -2 -3 "$1" "$2"  > "${fichier_dedup}"
+
+	# compter les lignes
+	nb_lignes=$(cat "${fichier_communs}" | wc -l | tr -d ' ')
+	nouveau_nom="$nom_fichier-$nom_fichier2-$nb_lignes-communs.txt"
+	mv "${fichier_communs}" "$nouveau_nom"
+	# renvoi au script appelant
+	fichier_communs="$nouveau_nom"
+	
+	nb_lignes=$(cat "${fichier_dedup}" | wc -l | tr -d ' ')
+	nouveau_nom="$nom_fichier-$nom_fichier2-$nb_lignes-dedup.txt"
+	mv "${fichier_dedup}" "$nouveau_nom"
+	# renvoi au script appelant
+	fichier_dedup="$nouveau_nom"
 
 	# globale définie dans le script sourcant
 	taquet=$(($taquet + 1))
