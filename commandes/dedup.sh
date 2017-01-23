@@ -96,9 +96,9 @@ do
 	echo  "${fichier_dedup##*/} : $((nb_dedup)) ligne(s) restantes, $((nb_paires)) enlevés"
 done
 
+nb_lignes=$(cat "${fichier_dedup}" | wc -l | tr -d ' ')
+fichier_final="$nom_fichier_original-$nb_lignes-dedup.txt"
 
-
-fichier_final="$nom_fichier_original-dedup.txt"
 cp "${fichier_dedup}" "$fichier_final"
 
 echo  "\nFichier final : ${fichier_final##*/} ($(($(wc -l < "$fichier_final"))) lignes), $(( $(($(wc -l < "$1"))) - $(($(wc -l < "$fichier_final"))) )) lignes enlevées."
