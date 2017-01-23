@@ -27,14 +27,14 @@ repertoire_dedup="${nom_fichier_original}_dedup"
 if [ -f "$repertoire/desinscrits.config" ] ; then
 	source "$repertoire/desinscrits.config"
 	# echo ">>> $liste_rouge"
-	set "$*" "$liste_rouge" "$liste_rouge2"
+	set $* "$liste_rouge" "$liste_rouge2"
 fi
 
 # vérif
 #for f in "$@" ; do 
 #	echo ">$f<"
 #done
-
+#exit
 
 
 # Chercher des doublons
