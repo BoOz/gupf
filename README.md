@@ -2,7 +2,17 @@
 
 **dedup**
 
-`dedup fichier1 [fichier2]` : créé un fichier avec les emails dans `fichier1` [mais pas dans `fichier2`]. Les doublons et les adresses invalides sont retirés.
+`dedup fichier1 [fichier2]` : créé un fichier avec les emails dans `fichier1` [mais pas dans `fichier2`]. 
+
+Les doublons et les adresses invalides sont isolés dans un repertoire `fichier1_dedup` créé à coté de `fichier1`.
+
+Option `-d`
+- Dédupliquer en fin de processus avec les fichiers `$liste_rouge` définis dans `desinscrits.config`.
+
+```
+liste_rouge="chemin/vers/liste_rouge.csv"
+liste_rouge2="chemin/vers/autre_liste_rouge.csv"
+```
 
 
 **...**
