@@ -1,7 +1,23 @@
 #!/bin/sh
 
-# Fonctions utiles pour traiter des fichiers.
+## Variables globales relatives au script appelant.
 
+# Récuperer les options du script
+# Parcourir les parametres envoyés
+for f in "$@" ; do 
+	# Chopper une éventuelle option d
+	if [[ "$f" == "-d" ]] ; then
+		_OPTION_D=true
+		shift 1
+	fi
+done
+
+# Path absolu du fichier à traiter
+fichier_original=$(realpath "$1")
+nom_fichier_original="${fichier_original%.*}"
+
+
+## Fonctions utiles pour traiter des fichiers.
 
 function nettoyer_sauts_de_lignes(){
 # Les fichiers windows ont des saut de ligne CRLF
