@@ -52,6 +52,5 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 
 Conversion HTML => Rtf
 ```
-brew cask install openoffice
-brew install unoconv
+textutil -convert rtf test.txt -output NewFileName.rtf
 ```
