@@ -52,5 +52,5 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 
 Conversion HTML => Rtf
 ```
-textutil -convert rtf test.txt -output NewFileName.rtf
+textutil -convert rtf -inputencoding utf-8 test.txt -output NewFileName.rtf
 ```
