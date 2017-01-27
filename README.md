@@ -42,3 +42,9 @@ git pull
 ./install.sh
 ```
 
+**Autres commandes utiles**
+
+Conversion HTML => Rtf
+```
+brew install unoconv
+```
