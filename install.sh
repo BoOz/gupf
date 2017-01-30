@@ -10,7 +10,7 @@ clear
 repertoire=${0%/*}
 
 echo "***************************************"
-echo "Gestion des utilisateurs par fichiers."
+echo "Commandes en plus dans le terminal"
 echo "***************************************"
 
 echo "\nVérification des commandes.\n"
@@ -27,15 +27,14 @@ do
 	echo "Ajouter la commande \`$commande\` dans le fichier \`$HOME/.bash_profile\`."
 	echo "vim $HOME/.bash_profile # dans une nouvelle fenêtre du terminal.\n"
 	echo "Taper \`i\` et copier la ligne ci-dessous :"
-	echo "alias dedup=\"$f\""
+	echo "alias $commande=\"$f\""
 	echo "Taper \`esc :wq\` pour sauvegarder."
 	
 	echo "Relancer le terminal"
 	echo ". $HOME/.bash_profile\n"
 	# . $HOME/.bash_profile
 
-	echo "Usage : "
-	echo "$commande fichier1.txt fichier2.txt"
+	echo "Usage : $commande help\n\n"
 
 done
 
