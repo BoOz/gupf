@@ -18,7 +18,7 @@ find "$source" -name "*.wav" | while read f; do
 
 	# Si on a affaire à un fichier wav, on le converti à coté de la ou il est.
 	if [ -f "$source" ] ; then
-		ffmpeg -i "$f" -codec:a libmp3lame -qscale:a 2 -ar 48000 -ab 192k "${source/wav/mp3}" < /dev/null;
+		ffmpeg -i "$f" -codec:a libmp3lame -qscale:a 2 -ar 48000 -ab 192k "${source/.wav/.mp3}" < /dev/null;
 	else
 	# si on a affaire à un répertoire wav dans le path, on crée un repertoire mp3
 		dest=${source/wav/mp3}
