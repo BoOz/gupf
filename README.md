@@ -1,8 +1,4 @@
-# Commandes en plus dans le terminal
-
-## terminal
-
-`terminal` : Met à jour `terminal`et affiche les informations d'installation et les commandes disponibles. 
+# Des commandes en plus dans le terminal
 
 ```
 terminal
@@ -13,6 +9,10 @@ ogg2mp3
 wav2mp3
 xls2ssv
 ```
+
+## terminal
+
+`terminal` : Met à jour `terminal`et affiche les informations d'installation et les commandes disponibles. 
 
 ## dedup
 
