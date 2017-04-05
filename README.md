@@ -58,6 +58,11 @@ Press Command+Space and type Terminal and press enter/return key.
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null 2> /dev/null ; brew install caskroom/cask/brew-cask 2> /dev/null
 ```
 
+## csv kit
+```
+sudo pip install csvkit
+```
+
 ## Conversion HTML => Rtf
 ```
 textutil -convert rtf -inputencoding utf-8 test.txt -output NewFileName.rtf
