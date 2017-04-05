@@ -62,6 +62,8 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 ```
 sudo pip install csvkit
 ```
+http://csvkit.readthedocs.io
+
 
 ## Conversion HTML => Rtf
 ```
