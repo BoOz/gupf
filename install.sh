@@ -39,8 +39,4 @@ do
 	echo "# Usage : $commande help\n"
 
 done
-
-echo "\n- Installation OK."
 echo "\n\n"
-
-
