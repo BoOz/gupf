@@ -1,5 +1,19 @@
 # Commandes en plus dans le terminal
 
+## terminal
+
+`terminal` : Met à jour `terminal`et affiche les informations d'installation et les commandes disponibles. 
+
+```
+terminal
+csv2ssv
+dedup
+mkv2mp4
+ogg2mp3
+wav2mp3
+xls2ssv
+```
+
 ## dedup
 
 `dedup fichier1 [fichier2]` : créé un fichier avec les emails dans `fichier1` [mais pas dans `fichier2`]. 
