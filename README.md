@@ -88,3 +88,22 @@ textutil -convert rtf -inputencoding utf-8 test.txt -output NewFileName.rtf
 ## table2csv : récuperer un tableau HTML en csv
 pip install -U table2csv
 table2csv http://en.wikipedia.org/wiki/List_of_Super_Bowl_champions > dump.txt
+
+## generer une cle ssh
+```
+ssh-keygen -b 4096
+```
+puis entrée à chaque prompt
+
+## enregistrer un access ssh sur un serveur distant
+```
+brew install ssh-copy-id
+ssh-copy-id user@server.net
+```
+
+## barre de progression
+```
+brew install pv
+```
+## config mysql
+`vim .my.cnf`
