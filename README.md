@@ -109,4 +109,4 @@ brew install pv
 `vim .my.cnf`
 
 ## serveur http + mysql sur MAC
-...
+http://osxdaily.com/2012/09/02/start-apache-web-server-mac-os-x/
