@@ -107,3 +107,6 @@ brew install pv
 ```
 ## config mysql
 `vim .my.cnf`
+
+## serveur http + mysql sur MAC
+...
