@@ -80,6 +80,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 ## mysql
 ```
 brew install mysql
+mysql.server restart
 ```
 
 ## csv kit
