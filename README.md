@@ -52,6 +52,12 @@ git pull
 ./install.sh
 ```
 
+# ajout au PATH
+```
+# ajouter des commandes au shell (MAMP + terminal)
+export PATH=$PATH:/Applications/MAMP/Library/bin:la/ou/est/terminal
+```
+
 # Dépendances
 
 Sous MacOSX installer aussi
