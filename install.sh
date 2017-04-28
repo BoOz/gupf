@@ -15,7 +15,7 @@ echo "Installation et mise à jour"
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 cd "$DIR"
 
-echo "Bienvenue dans $DIR !"
+# echo "Bienvenue dans $DIR !"
 
 # maj des fichiers
 git pull
