@@ -77,6 +77,9 @@ Press Command+Space and type Terminal and press enter/return key.
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null 2> /dev/null ; brew install caskroom/cask/brew-cask 2> /dev/null
 ```
 
+# apache /php
+http://elliptips.info/installer-apache-mysql-et-php-sous-osx-sans-passer-par-mamp/
+
 ## mysql
 ```
 brew install mysql
