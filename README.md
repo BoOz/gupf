@@ -13,7 +13,7 @@ ssv2tsv
 
 ## terminal
 
-`terminal` : Met à jour `terminal`et affiche les informations d'installation et les commandes disponibles. 
+`terminal` : Met à jour `terminal`, affiche les informations d'installation et les commandes disponibles. 
 
 ## dedup
 
