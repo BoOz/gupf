@@ -43,13 +43,11 @@ chmod +x install.sh
 ./install.sh
 ```
 
-Si besoin relancer l'installation en glissant `install.sh` dans le terminal.
+Suivre les indications à l'écran pour ajouter `terminal` au PATH.
 
 # Mise à jour 
 ```
-cd la/ou/est/terminal
-git pull
-./install.sh
+terminal
 ```
 
 # ajout au PATH
