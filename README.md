@@ -58,7 +58,8 @@ export PATH=$PATH:/Applications/MAMP/Library/bin:la/ou/est/terminal
 
 # Dépendances
 
-Sous MacOSX installer aussi
+Sous MacOSX installer préalablement :
+- xcode (depuis l'appstore)
 
 ## Homebrew et cask
 Press Command+Space and type Terminal and press enter/return key.
