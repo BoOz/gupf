@@ -22,12 +22,16 @@ git pull
 
 #. "$HOME/.bash_profile"
 
+command -v realpath >/dev/null 2>&1 || { echo >&2 "\nErreur. Installer coreutils pour faire fonctionner spip_statique. brew install coreutils\n"; exit 1; }
+
+
 echo "# Ajouter les commandes \`terminal\` dans le fichier \`$HOME/.bash_profile\`."
 echo "vim $HOME/.bash_profile # dans une nouvelle fenêtre du terminal.\n"
 echo "Taper \`i\`, copier la ligne ci-dessous puis taper \`esc :wq\` pour sauvegarder."
 
 echo '\nexport PATH=$PATH:'$DIR'/bin\n'
 
+[ ! -d "$DIR/bin" ] && mkdir "$DIR/bin"
 
 echo "\nCommandes disponibles \n"
 
