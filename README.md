@@ -79,7 +79,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 ```
 
 # Apache / PHP / Mysql
-https://seenthis.net/messages/594184
+./APACHE_MYSQL_PHP.md
 
 ## csv kit
 ```
@@ -116,5 +116,3 @@ brew install pv
 ## config mysql
 `vim .my.cnf`
 
-## serveur http + mysql sur MAC
-http://osxdaily.com/2012/09/02/start-apache-web-server-mac-os-x/
