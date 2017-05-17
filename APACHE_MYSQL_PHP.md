@@ -104,8 +104,9 @@ Group staff
 brew install mysql
 brew services list # pour démarrer mysql
 
-mysqladmin -u root password 'yourpassword'
-(mysql secure install)?
+mysqladmin -u root -p password
+enter / root / root
+(mysql_secure_installation)?
 
 ```
 Conf mysql `vim ~/.my.cnf`
