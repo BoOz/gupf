@@ -126,10 +126,4 @@ sudo mkdir /var/mysql
 sudo ln -s /tmp/mysql.sock /var/mysql/mysql.sock
 ```
 
-en cas de soucis de mot de passe root
 
-```
-mysqladmin -u root -p password
-
-When it asks for a password, not not enter anything, just hit enter. It will then ask you to enter new password, then confirm. Finished.
-```
