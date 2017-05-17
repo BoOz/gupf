@@ -59,27 +59,20 @@ export PATH=$PATH:/Applications/MAMP/Library/bin:la/ou/est/terminal
 # Dépendances
 
 Sous MacOSX installer préalablement :
-- xcode (depuis l'appstore) pour avoir Git et SVN
+## xcode (depuis l'appstore) pour avoir Git et SVN
+
+## Apache / PHP / Mysql
+https://github.com/BoOz/terminal/blob/master/APACHE_MYSQL_PHP.md
 
 ## Homebrew et cask
-Press Command+Space and type Terminal and press enter/return key.
-```
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null 2> /dev/null ; brew install caskroom/cask/brew-cask 2> /dev/null
-```
+https://brew.sh/index_fr.html
 
-## les commandes unix oubliées par MacOSX
+# Commandes utiles
+
+## wget
+
+## autres commandes unix oubliées par MacOSX
 `brew install coreutils`
-
-# Autres commandes utiles
-
-## Installer homebrew et cask
-Press Command+Space and type Terminal and press enter/return key.
-```
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null 2> /dev/null ; brew install caskroom/cask/brew-cask 2> /dev/null
-```
-
-# Apache / PHP / Mysql
-./APACHE_MYSQL_PHP.md
 
 ## csv kit
 ```
@@ -87,12 +80,10 @@ sudo pip install csvkit
 ```
 http://csvkit.readthedocs.io
 
-
 ## Conversion HTML => Rtf
 ```
 textutil -convert rtf -inputencoding utf-8 test.txt -output NewFileName.rtf
 ```
-
 ## table2csv : récuperer un tableau HTML en csv
 pip install -U table2csv
 table2csv http://en.wikipedia.org/wiki/List_of_Super_Bowl_champions > dump.txt
