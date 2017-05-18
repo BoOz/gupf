@@ -4,12 +4,12 @@ clear
 # Doc
 _DOC_DEDUP="Préciser le fichier à dedupliquer.\ndedup fichier1 [fichier2] [...] # emails dans fichier1 [mais pas dans fichier2] [ni d'autres fichiers]. fichier1 est formaté, dédoublonné et trié.\n\nOptions:\n-d : ajoute à la queue de deduplication les fichiers définis dans le fichier \`desinscrits.config\`.\n\n"
 if [ -z "$1" ]; then
- echo "Usage : dedup fichier1 [fichier2] [...]. Voir \`dedup help\`."	
- exit
+	echo "$_DOC_DEDUP"	
+	exit
 fi
 if [[ "$1" == "help" ]]; then
- echo "$_DOC_DEDUP"	
- exit
+	echo "$_DOC_DEDUP"	
+	exit
 fi
 
 # Où sommes-nous ?
