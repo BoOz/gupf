@@ -2,7 +2,7 @@
 clear
 
 # Doc
-_DOC_DEDUP="Préciser le fichier à dedupliquer.\ndedup fichier1 [fichier2] [...] # emails dans fichier1 [mais pas dans fichier2] [ni d'autres fichiers]. fichier1 est formaté, dédoublonné et trié.\n\nOptions:\n-d : ajoute à la queue de deduplication les fichiers définis dans le fichier \`desinscrits.config\`.\n\n"
+_DOC_DEDUP="Préciser le fichier à dedupliquer.\ndedup fichier1 [fichier2] [...] # emails dans fichier1 [mais pas dans fichier2] [ni d'autres fichiers]. fichier1 est formaté, dédoublonné et trié.\n\nOptions:\n-d : ajoute à la queue de deduplication les fichiers \'$liste_rouge\` et \'$liste_rouge2\` définis dans le fichier \`terminal/desinscrits.config\`.\n\nliste_rouge=\"/mon/fichier.txt\"\nliste_rouge2=\"/mon/autre/fichier.txt\"\n\nDédoublonner et nettoyer une liste d'emails :\nPour dédoublonner un fichier et nettoyer les adresses emails: \`dedup mon_fichier.txt\`\n\n"
 if [ -z "$1" ]; then
 	echo "$_DOC_DEDUP"	
 	exit
@@ -15,6 +15,10 @@ fi
 # Où sommes-nous ?
 repertoire=${0%/*}
 repertoire=${repertoire/\/commandes/}
+repertoire=${repertoire/bin/}
+#echo $repertoire
+#exit
+
 # init
 source "$repertoire/inc/utils.sh"
 
