@@ -52,8 +52,8 @@ terminal
 
 # ajout au PATH
 ```
-# ajouter des commandes au shell (MAMP + terminal)
-export PATH=$PATH:/Applications/MAMP/Library/bin:la/ou/est/terminal
+# ajouter des commandes au shell
+export PATH=$PATH:la/ou/est/terminal/bin
 ```
 
 # Dépendances
@@ -67,12 +67,24 @@ https://github.com/BoOz/terminal/blob/master/APACHE_MYSQL_PHP.md
 ## Homebrew et cask
 https://brew.sh/index_fr.html
 
+
 # Commandes utiles
 
 ## wget
 
 ## autres commandes unix oubliées par MacOSX
 `brew install coreutils`
+
+## Réinstaller python car l'install de Mac pose des soucis
+```
+brew reinstall python
+```
+
+## pip, pour installer des scripts python
+```
+sudo easy_install pip
+pip install --upgrade setuptools
+```
 
 ## csv kit
 ```

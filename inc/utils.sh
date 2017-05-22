@@ -12,6 +12,8 @@ for f in "$@" ; do
 	fi
 done
 
+command -v realpath >/dev/null 2>&1 || { echo >&2 "\nErreur. Installer coreutils pour faire fonctionner terminal. brew install coreutils\n"; exit 1; }
+
 # Path absolu du fichier à traiter
 fichier_original=$(realpath "$1")
 nom_fichier_original="${fichier_original%.*}"
