@@ -1,4 +1,4 @@
-Détail install #apache sur Mac Osx
+Détail install #apache / #mysql / #php sur Mac OSx
 
 Vérifier que tout va bien : `apachectl configtest`
 En cas de soucis voir : https://apple.stackexchange.com/questions/211015/el-capitan-apache-error-message-ah00526
