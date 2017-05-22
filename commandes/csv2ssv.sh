@@ -1,7 +1,7 @@
 #!/bin/sh
 # Convertir le fichier csv en "csv" d'après excel. Si on est en France Excel suppose que le séparateur est  ;...
 
-command -v csvformat >/dev/null 2>&1 || { echo >&2 "\nErreur. Installer csvkit pour faire fonctionner la commande. sudo pip install csvkit\n"; exit 1; }
+command -v csvformat >/dev/null 2>&1 || { echo >&2 "\nErreur. Installer csvkit pour faire fonctionner la commande. pip install csvkit\n"; exit 1; }
 
 source="$1"
 
