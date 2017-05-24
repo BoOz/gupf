@@ -92,6 +92,10 @@ sudo pip install csvkit
 ```
 http://csvkit.readthedocs.io
 
+## spip-cli, SPIP en lignes de commandes
+https://contrib.spip.net/SPIP-Cli
+
+
 ## Conversion HTML => Rtf
 ```
 textutil -convert rtf -inputencoding utf-8 test.txt -output NewFileName.rtf
