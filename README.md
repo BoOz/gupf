@@ -100,6 +100,11 @@ https://contrib.spip.net/SPIP-Cli
 brew install imagemagick
 ```
 
+## Extraire le texte d'un PDF
+```
+brew install poppler
+```
+
 ## Conversion HTML => Rtf
 ```
 textutil -convert rtf -inputencoding utf-8 test.txt -output NewFileName.rtf
