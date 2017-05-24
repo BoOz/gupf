@@ -95,6 +95,10 @@ http://csvkit.readthedocs.io
 ## spip-cli, SPIP en lignes de commandes
 https://contrib.spip.net/SPIP-Cli
 
+## imagemagick, traitement images et PDF
+```
+brew install imagemagick
+```
 
 ## Conversion HTML => Rtf
 ```
