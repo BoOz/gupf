@@ -98,6 +98,7 @@ https://contrib.spip.net/SPIP-Cli
 ## imagemagick, traitement images et PDF
 ```
 brew install imagemagick
+brew install ghostscript
 ```
 
 ## Extraire le texte d'un PDF
