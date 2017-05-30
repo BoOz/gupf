@@ -14,6 +14,8 @@ fi
 
 echo "\n* Conversion mp3 48 000 Hz des wav : $source\n"
 
+command -v ffmpeg >/dev/null 2>&1 || { echo >&2 "\nErreur. Installer ffmpeg pour faire fonctionner la commande. brew install ffmpeg\n"; exit 1; }
+
 find "$source" -name "*.wav" | while read f; do
 
 	# Si on a affaire à un fichier wav, on le converti à coté de la ou il est.
