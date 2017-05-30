@@ -126,4 +126,17 @@ sudo mkdir /var/mysql
 sudo ln -s /tmp/mysql.sock /var/mysql/mysql.sock
 ```
 
+# Logs
+Apache / php
+```
+tail -F /var/log/apache2/error_log
+```
+
+Mysql
+```
+# ps auxww|grep [m]ysqld
+# tail -F /usr/local/var/mysql/XXX.local.err
+tail -F /usr/local/var/mysql/Bongo.local.err
+```
+
 
