@@ -125,8 +125,19 @@ Régler un bug
 sudo mkdir /var/mysql
 sudo ln -s /tmp/mysql.sock /var/mysql/mysql.sock
 ```
+# reboot
+Relancer mysql
+```
+brew services restart mysql
+```
+
+Relancer apache
+```
+sudo apachectl graceful
+```
 
 # Logs
+
 Apache / php
 ```
 tail -F /var/log/apache2/error_log
