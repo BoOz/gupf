@@ -1,4 +1,4 @@
-Détail install #apache / #mysql / #php sur Mac OS
+# Détail install #apache / #mysql / #php sur Mac OS
 
 Vérifier qu'apache est là : `apachectl configtest`
 
