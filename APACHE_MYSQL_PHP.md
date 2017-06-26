@@ -1,7 +1,8 @@
-Détail install #apache / #mysql / #php sur Mac OSx
+Détail install #apache / #mysql / #php sur Mac OS
 
 Vérifier que tout va bien : `apachectl configtest`
-En cas de soucis voir : https://apple.stackexchange.com/questions/211015/el-capitan-apache-error-message-ah00526
+
+En cas de soucis avec El Capitan voir : https://apple.stackexchange.com/questions/211015/el-capitan-apache-error-message-ah00526
 
 Config des modules apache : `sudo vim /etc/apache2/httpd.conf`
 
