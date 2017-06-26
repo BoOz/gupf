@@ -1,4 +1,6 @@
-# Sous MacOSX installer la première fois :
+# Serveur web local Sous Mac OS 
+
+A installer la première fois :
 
 ## Xcode pour avoir Git et SVN
 (depuis l'appstore)
