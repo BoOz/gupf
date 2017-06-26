@@ -9,23 +9,20 @@ Config des modules apache : `sudo vim /etc/apache2/httpd.conf`
 Décommenter
 ```
 LoadModule php5_module libexec/apache2/libphp5.so
-LoadModule userdir_module libexec/apache2/mod_userdir.so
-
-Include /private/etc/apache2/extra/httpd-userdir.conf
 ```
 
-Activer les préférences utilisateurs `sudo vim /etc/apache2/extra/httpd-userdir.conf`
-
-Décommenter 
+Modifier
 ```
-Include /private/etc/apache2/users/*.conf
-```
+DocumentRoot "/Users/VOTRE_USER/Sites"
+<Directory "/Users/VOTRE_USER/Sites">
 
-Déclarer un fichier de configuration utilisateur `sudo vim /etc/apache2/users/USERNAME.conf` qui inclut des vhosts persos dans placés dans `/Sites` de manière à les changer facilement.
 
-Ajouter 
-```
-Include /Users/USER/Sites/httpd-vhosts.conf
+# Virtual hosts
+Include /Users/VOTRE_USER/Sites/httpd-vhosts.conf
+
+user VOTRE_USER
+group staff
+
 ```
 
 Déclarer les vhosts persos dans `/Users/USER/Sites/httpd-vhosts.conf`
@@ -52,8 +49,6 @@ Require all granted
 
 
 ```
-
-Note : plutôt que de passer par les `httpd-userdir.conf` peut-être vaut-il mieux passer par `Include /private/etc/apache2/extra/httpd-vhosts.conf` car en fait on a pas vraimment plusieurs utilisateurs sur la machine...
 
 Voir : https://coolestguidesontheplanet.com/set-virtual-hosts-apache-mac-osx-10-10-yosemite/
 
