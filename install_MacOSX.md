@@ -1,13 +1,13 @@
 # Sous MacOSX installer la première fois :
 
-## xcode (depuis l'appstore) pour avoir Git et SVN
+## xcode pour avoir Git et SVN
+(depuis l'appstore)
 
 ## Apache / PHP / Mysql
 https://github.com/BoOz/terminal/blob/master/APACHE_MYSQL_PHP.md
 
 ## Homebrew et cask
 https://brew.sh/index_fr.html
-
 
 # Commandes utiles
 
