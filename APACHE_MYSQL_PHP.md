@@ -11,15 +11,12 @@ LoadModule php5_module libexec/apache2/libphp5.so
 
 Modifier
 ```
-DocumentRoot "/Users/VOTRE_USER/Sites"
-<Directory "/Users/VOTRE_USER/Sites">
+DocumentRoot "/Users/VOTRE_USER/Sites" // inutile ?
+<Directory "/Users/VOTRE_USER/Sites"> // inutile ?
 
 
 # Virtual hosts
 Include /Users/VOTRE_USER/Sites/httpd-vhosts.conf
-
-user VOTRE_USER
-group staff
 
 ```
 
