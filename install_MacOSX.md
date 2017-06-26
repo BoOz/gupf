@@ -22,6 +22,14 @@ https://brew.sh/index_fr.html
 brew install imagemagick
 brew install ghostscript
 ```
+## spip-cli, SPIP en lignes de commandes
+https://contrib.spip.net/SPIP-Cli
+
+
+## Extraire le texte d'un PDF
+```
+brew install poppler
+```
 
 ## Réinstaller python car l'install de Mac pose des soucis
 ```
@@ -40,14 +48,6 @@ sudo pip install csvkit
 ```
 http://csvkit.readthedocs.io
 
-## spip-cli, SPIP en lignes de commandes
-https://contrib.spip.net/SPIP-Cli
-
-
-## Extraire le texte d'un PDF
-```
-brew install poppler
-```
 
 ## Conversion HTML => Rtf
 ```
