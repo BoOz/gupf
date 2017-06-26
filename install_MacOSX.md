@@ -26,11 +26,6 @@ brew install ghostscript
 https://contrib.spip.net/SPIP-Cli
 
 
-## Extraire le texte d'un PDF
-```
-brew install poppler
-```
-
 ## Réinstaller python car l'install de Mac pose des soucis
 ```
 brew reinstall python
@@ -47,6 +42,12 @@ pip install --upgrade setuptools
 sudo pip install csvkit
 ```
 http://csvkit.readthedocs.io
+
+
+## Extraire le texte d'un PDF
+```
+brew install poppler
+```
 
 
 ## Conversion HTML => Rtf
