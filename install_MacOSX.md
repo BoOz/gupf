@@ -1,6 +1,6 @@
 # Sous MacOSX installer la première fois :
 
-## xcode pour avoir Git et SVN
+## Xcode pour avoir Git et SVN
 (depuis l'appstore)
 
 ## Apache / PHP / Mysql
