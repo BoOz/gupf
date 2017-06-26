@@ -12,9 +12,16 @@ https://brew.sh/index_fr.html
 # Commandes utiles
 
 ## wget
+`brew install wget`
 
 ## autres commandes unix oubliées par MacOSX
 `brew install coreutils`
+
+## imagemagick, traitement images et PDF
+```
+brew install imagemagick
+brew install ghostscript
+```
 
 ## Réinstaller python car l'install de Mac pose des soucis
 ```
@@ -36,11 +43,6 @@ http://csvkit.readthedocs.io
 ## spip-cli, SPIP en lignes de commandes
 https://contrib.spip.net/SPIP-Cli
 
-## imagemagick, traitement images et PDF
-```
-brew install imagemagick
-brew install ghostscript
-```
 
 ## Extraire le texte d'un PDF
 ```
