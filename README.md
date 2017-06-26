@@ -1,14 +1,17 @@
 # Des commandes en plus dans le terminal
 
 ```
-terminal
-csv2ssv
-dedup
-mkv2mp4
-ogg2mp3
 wav2mp3
+ogg2mp3
+mkv2mp4
+
+csv2ssv
 xls2ssv
 ssv2tsv
+
+dedup
+
+terminal
 ```
 
 ## terminal
