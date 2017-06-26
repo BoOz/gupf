@@ -1,8 +1,6 @@
 Détail install #apache / #mysql / #php sur Mac OS
 
-Vérifier que tout va bien : `apachectl configtest`
-
-En cas de soucis avec El Capitan voir : https://apple.stackexchange.com/questions/211015/el-capitan-apache-error-message-ah00526
+Vérifier qu'apache est là : `apachectl configtest`
 
 Config des modules apache : `sudo vim /etc/apache2/httpd.conf`
 
@@ -50,10 +48,6 @@ Require all granted
 
 ```
 
-Voir : https://coolestguidesontheplanet.com/set-virtual-hosts-apache-mac-osx-10-10-yosemite/
-
-Attention à la version d'apache pour déclarer le fichier  : https://coolestguidesontheplanet.com/forbidden-403-you-dont-have-permission-to-access-username-on-this-server/
-
 Brancher le tout sur l'internet local : `sudo vim /etc/hosts`
 
 Ajouter
@@ -93,6 +87,11 @@ Si vous avez un accès à un disque avec votre user et votre groupe, mais pas ap
 User vincent
 Group staff
 ```
+
+Voir : https://coolestguidesontheplanet.com/set-virtual-hosts-apache-mac-osx-10-10-yosemite/
+
+Attention à la version d'apache pour déclarer le fichier  : https://coolestguidesontheplanet.com/forbidden-403-you-dont-have-permission-to-access-username-on-this-server/
+
 
 # Mysql
 
