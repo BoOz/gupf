@@ -96,6 +96,11 @@ Attention à la version d'apache pour déclarer le fichier  : https://coolestgui
 brew install mysql
 brew services list # pour démarrer mysql
 
+# Régler un bug
+sudo mkdir /var/mysql
+sudo ln -s /tmp/mysql.sock /var/mysql/mysql.sock
+
+# reset login root pass root
 mysqladmin -u root -p password
 enter / root / root
 (mysql_secure_installation)?
@@ -111,12 +116,6 @@ password=root
 default-character-set=utf8mb4
 ```
 
-Régler un bug 
-
-```
-sudo mkdir /var/mysql
-sudo ln -s /tmp/mysql.sock /var/mysql/mysql.sock
-```
 # reboot
 Relancer mysql
 ```
