@@ -99,6 +99,7 @@ brew services list # pour démarrer mysql
 # Régler un bug
 sudo mkdir /var/mysql
 sudo ln -s /tmp/mysql.sock /var/mysql/mysql.sock
+brew services restart mysql
 
 # reset login root pass root
 mysqladmin -u root -p password
