@@ -78,3 +78,10 @@ brew install pv
 ```
 ## config mysql
 `vim .my.cnf`
+
+exemple
+```
+[mysqldump]
+user=root
+password=xxxx
+```
