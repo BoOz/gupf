@@ -4,6 +4,10 @@ A installer la première fois :
 
 ## Xcode pour avoir Git et SVN
 (depuis l'appstore)
+Puis
+```
+xcode-select --install
+```
 
 ## Apache / PHP / Mysql
 https://github.com/BoOz/terminal/blob/master/APACHE_MYSQL_PHP.md
