@@ -49,7 +49,7 @@ sudo pip install csvkit
 ```
 http://csvkit.readthedocs.io
 
-## extraire des n-gramme d'un texte
+## extraire des n-grammes d'un texte
 http://learntextvis.github.io/textkit/
 
 ```
