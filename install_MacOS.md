@@ -51,6 +51,7 @@ http://csvkit.readthedocs.io
 
 ## extraire des n-grammes d'un texte
 http://learntextvis.github.io/textkit/
+https://github.com/learntextvis/textkit/issues/34
 
 ```
 pip install -U textkit
