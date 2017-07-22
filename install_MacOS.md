@@ -1,5 +1,4 @@
-# Serveur web local avec Mac OS 
-
+# Prérequis
 A installer la première fois :
 
 ## Xcode pour avoir Git et SVN
@@ -8,12 +7,21 @@ Puis
 ```
 xcode-select --install
 ```
+## Homebrew et cask
+https://brew.sh/index_fr.html
+
+## Node
+pour installer des paquets avec `npm install xxx`.
+```
+brew install node
+```
+
+
+# Serveur web local avec Mac OS 
 
 ## Apache / PHP / Mysql
 https://github.com/BoOz/terminal/blob/master/APACHE_MYSQL_PHP.md
 
-## Homebrew et cask
-https://brew.sh/index_fr.html
 
 # Commandes utiles
 
@@ -30,12 +38,6 @@ brew install ghostscript
 ```
 ## spip-cli, SPIP en lignes de commandes
 https://contrib.spip.net/SPIP-Cli
-
-## Installer node
-pour installer des paquets avec `npm install xxx`.
-```
-brew install node
-```
 
 ## Réinstaller python car l'install de Mac pose des soucis
 ```
