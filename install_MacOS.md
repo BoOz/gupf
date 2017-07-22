@@ -32,8 +32,8 @@ brew install ghostscript
 https://contrib.spip.net/SPIP-Cli
 
 ## Installer node
-pour installer des paquets avec `npm install xxx`
-````
+pour installer des paquets avec `npm install xxx`.
+```
 brew install node
 ```
 
