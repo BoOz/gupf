@@ -31,6 +31,11 @@ brew install ghostscript
 ## spip-cli, SPIP en lignes de commandes
 https://contrib.spip.net/SPIP-Cli
 
+## Installer node
+pour installer des paquets avec `npm install xxx`
+````
+brew install node
+```
 
 ## Réinstaller python car l'install de Mac pose des soucis
 ```
