@@ -111,6 +111,7 @@ https://doc.ubuntu-fr.org/permissions
 - Dossier : 770
 
 Pour ajouter les droits au groupe en tenant compte de la nature repertoire ou fichier des éléments inclus dans `monrep` :
+
 ```
 chmod -R g+rwX monrep
 ```
