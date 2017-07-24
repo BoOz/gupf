@@ -104,3 +104,7 @@ exemple
 user=root
 password=xxxx
 ```
+
+## Droits sur les fichiers et répertoires
+- Fichier : 664
+- Dossier : 770
