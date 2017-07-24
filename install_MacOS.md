@@ -106,5 +106,6 @@ password=xxxx
 ```
 
 ## Droits sur les fichiers et répertoires
+https://doc.ubuntu-fr.org/permissions
 - Fichier : 664
 - Dossier : 770
