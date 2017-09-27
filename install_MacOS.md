@@ -65,10 +65,13 @@ pip install -U textkit
 ```
 
 
-## Extraire le texte d'un PDF
+## Extraire les infos ou le texte d'un PDF
 ```
 brew install poppler
+pdfinfo fichier.pdf
+pdftotext fichier.pdf fichier.txt
 ```
+https://doc.ubuntu-fr.org/poppler-utils
 
 
 ## Conversion HTML => Rtf
