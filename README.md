@@ -45,7 +45,7 @@ Les doublons et les adresses invalides sont isolés dans un repertoire `fichier1
 
 **Options**
 
-`-d` : Dédupliquer en fin de processus avec les fichiers `$liste_rouge` définis dans `desinscrits.config`.
+`-d` : Dédupliquer en fin de processus avec les fichiers `$liste_rouge` et `$liste_rouge2` définis dans `desinscrits.config`.
 
 ```
 liste_rouge="chemin/vers/liste_rouge.csv"
