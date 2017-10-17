@@ -33,26 +33,18 @@ terminal
 
 # Documentation des commandes
 
-## terminal
-
-`terminal` : Met à jour `terminal`, affiche les informations d'installation et les commandes disponibles. 
-
-## dedup
+`terminal` : Met à jour le programme et affiche la documentation des commandes disponibles. 
 
 `dedup fichier1 [fichier2]` : créé un fichier avec les emails dans `fichier1` [mais pas dans `fichier2`]. 
-
 Les doublons et les adresses invalides sont isolés dans un repertoire `fichier1_dedup` créé à coté de `fichier1`.
-
 **Options**
-
 `-d` : Dédupliquer en fin de processus avec les fichiers `$liste_rouge` et `$liste_rouge2` définis dans `desinscrits.config`.
-
 ```
 liste_rouge="chemin/vers/liste_rouge.csv"
 liste_rouge2="chemin/vers/autre_liste_rouge.csv"
 ```
 
-# Conversion de fichiers
+# Commandes de conversion de fichiers
 
 Commandes `X2Y` pour transformer un fichier au format `X` au format `Y`
 
