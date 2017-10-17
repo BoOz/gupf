@@ -58,7 +58,7 @@ xls2ssv
 ssv2tsv
 ````
 
-# Article de documentation sur la personnalisation du terminal
+# Articles de documentation sur la personnalisation du terminal
 Installer d'autres commandes sur MacOS
 https://github.com/BoOz/terminal/blob/master/install_MacOS.md
 
