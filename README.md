@@ -43,8 +43,9 @@ terminal
 
 Les doublons et les adresses invalides sont isolés dans un repertoire `fichier1_dedup` créé à coté de `fichier1`.
 
-**Option `-d`**
-Dédupliquer en fin de processus avec les fichiers `$liste_rouge` définis dans `desinscrits.config`.
+**Options**
+
+`-d` : Dédupliquer en fin de processus avec les fichiers `$liste_rouge` définis dans `desinscrits.config`.
 
 ```
 liste_rouge="chemin/vers/liste_rouge.csv"
