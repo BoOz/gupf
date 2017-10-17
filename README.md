@@ -24,18 +24,14 @@ chmod +x install.sh
 ./install.sh
 ```
 
-Suivre les indications à l'écran pour ajouter `terminal` au PATH.
+Suivre les indications à l'écran pour ajouter `terminal` au PATH (export PATH=$PATH:la/ou/est/terminal/bin).
 
 # Mise à jour 
 ```
 terminal
 ```
 
-# ajout au PATH
-```
-# ajouter des commandes au shell
-export PATH=$PATH:la/ou/est/terminal/bin
-```
+# Documentation des commandes
 
 ## terminal
 
@@ -55,7 +51,19 @@ liste_rouge="chemin/vers/liste_rouge.csv"
 liste_rouge2="chemin/vers/autre_liste_rouge.csv"
 ```
 
-## ...
+# Conversion de fichiers
+
+Commandes `X2Y` pour transformer un fichier au format `X` au format `Y`
+
+```
+wav2mp3
+ogg2mp3
+mkv2mp4
+
+csv2ssv
+xls2ssv
+ssv2tsv
+````
 
 
 
