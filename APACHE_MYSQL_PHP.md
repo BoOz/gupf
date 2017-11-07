@@ -6,13 +6,14 @@ Config des modules apache : `sudo vim /etc/apache2/httpd.conf`
 
 Décommenter
 ```
+LoadModule rewrite_module libexec/apache2/mod_rewrite.so
 LoadModule php5_module libexec/apache2/libphp5.so
 ```
 
 Modifier
 ```
-DocumentRoot "/Users/VOTRE_USER/Sites" // inutile ?
-<Directory "/Users/VOTRE_USER/Sites"> // inutile ?
+DocumentRoot "/Users/VOTRE_USER/Sites" 
+<Directory "/Users/VOTRE_USER/Sites"> 
 
 
 # Virtual hosts
