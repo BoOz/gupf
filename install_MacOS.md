@@ -99,6 +99,12 @@ brew install ssh-copy-id
 ssh-copy-id user@server.net
 ```
 
+## forcer un user pour une connexion ssh : `vim .ssh/config `
+```
+host server.net
+     User annie
+```
+
 ## barre de progression
 ```
 brew install pv
