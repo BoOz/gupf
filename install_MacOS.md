@@ -82,7 +82,12 @@ textutil -convert rtf -inputencoding utf-8 test.txt -output NewFileName.rtf
 pip install -U table2csv
 table2csv http://en.wikipedia.org/wiki/List_of_Super_Bowl_champions > dump.txt
 
-## generer une cle ssh
+## Voir si on a déjà une clé `id_rsa.pub`
+```
+ls .ssh
+```
+
+## générer une cle ssh
 ```
 ssh-keygen -b 4096
 ```
