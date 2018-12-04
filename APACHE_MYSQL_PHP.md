@@ -143,4 +143,10 @@ Mysql
 tail -F /usr/local/var/mysql/Bongo.local.err
 ```
 
+Parfois aussi sous debian
+```
+tail -F /var/log/mysql/mysql-slow.log
+```
+
+
 
