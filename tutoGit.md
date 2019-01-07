@@ -12,6 +12,9 @@ Note : git pull = git fetch suivi de git merge
 ## Enregistrer la modif
 `git commit -m"message de log"`
 
+## Ajouter et enregistrer toutes les modifs d'un coup
+`git commit -am "message de log"`
+
 ## Envoyer sur le dépot distant
 `git push`
 
