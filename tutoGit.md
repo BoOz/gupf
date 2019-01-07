@@ -1,6 +1,19 @@
 # Tuto Git
 https://git-scm.com/book/fr/v1/D%C3%A9marrage-rapide
 
+## Mettre à jour un projet
+`git pull`
+
+Note : git pull = git fetch suivi de git merge
+
+## Ajouter une modif
+`git add <fichier>`
+
+## Enregistrer la modif
+`git commit -m"message de log"`
+
+
+
 ## Rectifier des erreurs
 
 Si on a oublié un truc dans un commit (un git add par ex), on le fait puis on
