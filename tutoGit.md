@@ -1,6 +1,9 @@
 # Tuto Git
 https://git-scm.com/book/fr/v1/D%C3%A9marrage-rapide
 
+## Récupérer un projet la première fois
+`git clone git@github.com:<depot>.git`
+
 ## Mettre à jour un projet
 `git pull`
 
