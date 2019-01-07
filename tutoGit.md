@@ -46,10 +46,12 @@ git branch -D <nom_de_la_branche> (même si des trucs ne sont pas commités)
 ```
 
 - Changer de branche
-`git checkout test (HEAD se déplace sur la branche test)`
-`git checkout master (HEAD revient au master)`
+```
+git checkout test (HEAD se déplace sur la branche test)
+git checkout master (HEAD revient au master)
+```
 
-- Fusionner des branches
+- Fusionner des branches (reporter test dans master)
 ```
 git checkout master
 git merge test
