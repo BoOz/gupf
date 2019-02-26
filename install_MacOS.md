@@ -129,3 +129,10 @@ Pour ajouter les droits au groupe en tenant compte de la nature repertoire ou fi
 ```
 chmod -R g+rwX monrep
 ```
+
+**Copier un repertoire en conservant les droits**
+
+```
+cp -fra depart arrivée
+```
+
