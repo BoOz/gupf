@@ -136,3 +136,8 @@ chmod -R g+rwX monrep
 cp -fra depart arrivée
 ```
 
+Remplacer un repertoire par un autre
+
+```
+mv toto toto-old && mv toto-merge toto
+```
