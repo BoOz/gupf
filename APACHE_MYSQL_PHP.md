@@ -133,7 +133,7 @@ sudo apachectl graceful
 
 Apache / php
 ```
-tail -F /var/log/apache2/error_log
+tail -F /var/log/apache2/error.log
 ```
 
 Mysql
