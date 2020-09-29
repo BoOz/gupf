@@ -64,6 +64,12 @@ git checkout master
 git merge test
 ```
 
+- Récupérer sur sa branche les commit intervenus sur le master
+
+```
+git pull origin/master 
+```
+
 - Envoyer une branche sur le serveur
 `git push origin <nom_de_la_branche>`
 
