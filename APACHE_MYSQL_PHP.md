@@ -88,6 +88,8 @@ Group staff
 
 Voir : https://coolestguidesontheplanet.com/set-virtual-hosts-apache-mac-osx-10-10-yosemite/
 
+Sur Big : https://tobschall.de/2020/11/01/big-sur-mamp/
+
 Attention à la version d'apache pour déclarer le fichier  : https://coolestguidesontheplanet.com/forbidden-403-you-dont-have-permission-to-access-username-on-this-server/
 
 
