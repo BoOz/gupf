@@ -85,3 +85,5 @@ git checkout -b <nom_de_la_branche> origin/<nom_de_la_branche>
 - Cloner une branche
 `git clone -b <nom_de_la_branche> --single-branch git@github.com:<depot>.git`
 
+
+Voir aussi : https://ohshitgit.com/fr
