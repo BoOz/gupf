@@ -68,7 +68,7 @@ git checkout master
 git merge test
 ```
 
-- Récupérer sur sa branche les commit intervenus sur le master
+- Récupérer sur sa branche les commit intervenus sur le master ??
 
 ```
 git pull origin/master 
@@ -81,6 +81,12 @@ git pull origin/master
 ```
 git fetch
 git checkout -b <nom_de_la_branche> origin/<nom_de_la_branche>
+```
+
+
+- voir la différence en le master et une branche
+```
+git diff master labranche
 ```
 
 - Effacer une branche distante
