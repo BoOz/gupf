@@ -99,7 +99,10 @@ Attention à la version d'apache pour déclarer le fichier  : https://coolestgui
 brew install mysql
 brew services list # pour démarrer mysql
 
+```
+
 # débloquer l'identification Mysql 8
+
 ```
 mysqld_safe --skip-grant-tables &
 mysql
