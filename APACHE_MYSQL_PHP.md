@@ -113,9 +113,22 @@ exit
 brew services restart mysql
 ```
 
+Conf mysql `vim ~/.my.cnf`
+
+Ajouter
+```
+[client]
+user=root
+password=root
+default-character-set=utf8mb4
+[mysqld]
+default_authentication_plugin= mysql_native_password
+```
 
 
 # Régler un bug avec les vielle version
+
+```
 sudo mkdir /var/mysql
 sudo ln -s /tmp/mysql.sock /var/mysql/mysql.sock
 brew services restart mysql
@@ -126,18 +139,12 @@ enter / root / root
 (mysql_secure_installation)?
 
 ```
-Conf mysql `vim ~/.my.cnf`
 
-Ajouter
-```
-[client]
-user=root
-password=root
-default-character-set=utf8mb4
-```
+
 
 # reboot
 Relancer mysql
+
 ```
 brew services restart mysql
 ```
