@@ -126,7 +126,7 @@ default_authentication_plugin= mysql_native_password
 ```
 
 
-# Régler un bug avec les vielle version
+# Régler un bug avec les vielles versions
 
 ```
 sudo mkdir /var/mysql
