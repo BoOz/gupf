@@ -141,3 +141,15 @@ Remplacer un repertoire par un autre
 ```
 mv toto toto-old && mv toto-merge toto
 ```
+
+**Évaluer la taille des dossiers et trier par poids décroissant**
+
+```
+du -mks * | sort -rn
+```
+
+**Synchroniser des volumes / dossiers**
+
+```
+rsync -azv $rep_source/ $rep_destination/
+```
