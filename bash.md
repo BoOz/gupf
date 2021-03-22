@@ -16,6 +16,8 @@ comm -2 -3 fichier1 fichier2
 
 **Afficher une alerte si le nombre de colonne ne vas pas et certains champs dans certains cas**
 
+Pour taper le caractère "tab" avec un Mac dans le terminal :  Control + V + Tab 
+
 ```
 cat "$file" | awk -F"	" '
 	NF != 30 {print "Cette ligne a plus de 30 colonnes ("NF") : \n"$0"\n\n"}
