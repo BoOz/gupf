@@ -11,7 +11,24 @@ comm -1 -2 fichier1 fichier2
 ```
 comm -2 -3 fichier1 fichier2
 ```
- 
+
+## join
+
+**Fusionner deux fichiers triés sur une colonne commune**
+
+Sur la premiere colonne commune
+
+```
+join fichier1 fichier2
+```
+
+Sur la 3e du fichier1 et la deuxieme du fichier 2
+
+```
+join -13 -22 fichier1 fichier2
+```
+
+
 # awk
 
 **Afficher une alerte si le nombre de colonne ne vas pas et certains champs dans certains cas**
