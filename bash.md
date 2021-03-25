@@ -45,3 +45,11 @@ cat "$file" | awk -F"	" '
 '
 ```
 
+# Zip
+
+zipper avec un mot de passe
+
+``` 
+zip -e fichier.zip fichier.txt
+```
+
