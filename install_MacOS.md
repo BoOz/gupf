@@ -46,13 +46,12 @@ brew reinstall python
 
 ## pip, pour installer des scripts python
 ```
-sudo easy_install pip
-pip install --upgrade setuptools
+pip devient pip3
 ```
 
 ## csv kit
 ```
-sudo pip install csvkit
+sudo pip3 install csvkit
 ```
 http://csvkit.readthedocs.io
 
