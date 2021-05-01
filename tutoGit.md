@@ -59,6 +59,7 @@ git commit -am "message d'explication"
 git push -u origin dev/issue_6
 ```
 
+Puis aller faire une PR sur la forge.
 
 - Effacer une branche
 ```
