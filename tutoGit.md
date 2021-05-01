@@ -50,6 +50,16 @@ git branch --no-merged (prévoir de les merger ou les effacer)
 - Créer une branche
 `git branch <nom_de_la_branche>`
 
+exemple :
+
+```
+git branch dev/issue_6
+git checkout dev/issue_6
+git commit -am "message d'explication"
+git push -u origin dev/issue_6
+```
+
+
 - Effacer une branche
 ```
 git branch -d <nom_de_la_branche>
