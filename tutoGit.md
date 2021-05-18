@@ -108,3 +108,15 @@ git diff master labranche
 
 
 Voir aussi : https://ohshitgit.com/fr
+
+
+
+
+**Git-pull.sh**
+
+Pull tous les repertoire d'un sous repertoire.
+
+```
+ls | xargs -I{} git -C {} pull
+ls | xargs -P10 -I{} git -C {} pull
+```
