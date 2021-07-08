@@ -13,6 +13,18 @@ https://git-scm.com/book/fr/v1/D%C3%A9marrage-rapide
 
 Note : git pull = git fetch suivi de git merge
 
+## Remiser ses modifs (avant de pull)
+`git stash`
+
+## Remettre ses modifs (après le pull)
+`git stash apply`
+
+## Renoncer à ses modifs
+`git stash clear`
+
+Voir aussi `git stash list` et `git stash show`
+
+
 ## Ajouter une modif
 `git add <fichier>`
 
