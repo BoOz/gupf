@@ -8,6 +8,10 @@ https://git-scm.com/book/fr/v1/D%C3%A9marrage-rapide
 
 `git remote -v`
 
+## Voir les derniers commits
+
+`git log`
+
 ## Mettre à jour un projet
 `git pull`
 
