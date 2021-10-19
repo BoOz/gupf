@@ -39,6 +39,10 @@ brew install ghostscript
 ## spip-cli, SPIP en lignes de commandes
 https://contrib.spip.net/SPIP-Cli
 
+## FTP
+`brew install inetutils`
+
+
 ## Réinstaller python car l'install de Mac pose des soucis
 ```
 brew reinstall python
@@ -152,3 +156,4 @@ du -mks * | sort -rn
 ```
 rsync -azv $rep_source/ $rep_destination/
 ```
+
