@@ -28,6 +28,9 @@ https://github.com/BoOz/terminal/blob/master/APACHE_MYSQL_PHP.md
 ## wget
 `brew install wget`
 
+## FTP
+`brew install inetutils`
+
 ## autres commandes unix oubliées par MacOSX
 `brew install coreutils`
 
