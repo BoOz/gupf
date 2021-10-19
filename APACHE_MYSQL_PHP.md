@@ -7,7 +7,7 @@ Config des modules apache : `sudo vim /etc/apache2/httpd.conf`
 Décommenter
 ```
 LoadModule rewrite_module libexec/apache2/mod_rewrite.so
-LoadModule php5_module libexec/apache2/libphp5.so
+LoadModule php7_module libexec/apache2/libphp7.so
 ```
 
 Modifier
@@ -86,6 +86,16 @@ User vincent
 Group staff
 ```
 
+Déclarer le nom du serveur dans le même fichier /etc/apache2/httpd.conf
+
+Décommenter la ligne et remplacer l'exemple par le nom du serveur localhost
+
+```
+ServerName localhost
+```
+
+Pour tester le serveur créer un fichier index.html contenant "bravo" et ouvrir localhost dans le navigateur
+
 Voir : https://coolestguidesontheplanet.com/set-virtual-hosts-apache-mac-osx-10-10-yosemite/
 
 Sur Big : https://tobschall.de/2020/11/01/big-sur-mamp/
@@ -151,7 +161,7 @@ brew services restart mysql
 
 Relancer apache
 ```
-sudo apachectl graceful
+sudo apachectl graceful ou sudo /usr/sbin/apachectl restart
 ```
 
 # Logs
