@@ -74,9 +74,8 @@ Configurer php `sudo vim /etc/php.ini`
 date.timezone = Europe/Paris 
 ```
 
-Maj php
+**Maj php**
 
-```
 Sur un mac, installer php 7.4 en cli.
 
 ```
@@ -84,6 +83,40 @@ brew update
 brew install php@7.4
 brew unlink php@7.3 && brew link php@7.4
 ```
+
+Et aussi
+
+
+```
+To enable PHP in Apache add the following to httpd.conf and restart Apache:
+    LoadModule php7_module /usr/local/opt/php@7.4/lib/httpd/modules/libphp7.so
+
+    <FilesMatch \.php$>
+        SetHandler application/x-httpd-php
+    </FilesMatch>
+```
+
+Relancer apache `sudo apachectl graceful`
+
+
+```
+
+Finally, check DirectoryIndex includes index.php
+    DirectoryIndex index.php index.html
+
+The php.ini and php-fpm.ini file can be found in:
+    /usr/local/etc/php/7.4/
+
+Eventuellement.
+
+php@7.4 is keg-only, which means it was not symlinked into /usr/local,
+because this is an alternate version of another formula.
+
+If you need to have php@7.4 first in your PATH, run:
+  echo 'export PATH="/usr/local/opt/php@7.4/bin:$PATH"' >> /Users/vincent/.bash_profile
+  echo 'export PATH="/usr/local/opt/php@7.4/sbin:$PATH"' >> /Users/vincent/.bash_profile
+```
+
 
 Si vous avez un accès à un disque avec votre user et votre groupe, mais pas apache, vous pouvez donner à apache votre user et votre group
 
