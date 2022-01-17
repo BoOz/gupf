@@ -74,6 +74,17 @@ Configurer php `sudo vim /etc/php.ini`
 date.timezone = Europe/Paris 
 ```
 
+Maj php
+
+```
+Sur un mac, installer php 7.4 en cli.
+
+```
+brew update
+brew install php@7.4
+brew unlink php@7.3 && brew link php@7.4
+```
+
 Si vous avez un accès à un disque avec votre user et votre groupe, mais pas apache, vous pouvez donner à apache votre user et votre group
 
 `sudo vim /etc/apache2/httpd.conf`
