@@ -8,7 +8,19 @@ Décommenter
 ```
 LoadModule rewrite_module libexec/apache2/mod_rewrite.so
 LoadModule php5_module libexec/apache2/libphp5.so
+ou si plus récent ajouter
+LoadModule php_module /opt/homebrew/opt/php/lib/httpd/modules/libphp.so
 ```
+
+Sur les macs > 12
+
+```
+<FilesMatch \.php$>
+        SetHandler application/x-httpd-php
+    </FilesMatch>
+```
+
+
 
 Modifier
 ```
