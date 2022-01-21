@@ -117,9 +117,10 @@ brew install pv
 
 exemple
 ```
-[mysqldump]
+[client]
 user=root
-password=xxxx
+password=root
+default-character-set=utf8mb4
 ```
 
 ## Droits sur les fichiers et répertoires
