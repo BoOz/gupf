@@ -20,6 +20,10 @@ Sur les macs > 12 il faut créer un certificat pour signer php : https://www.sim
     </FilesMatch>
 ```
 
+et aussi :
+
+`chmod +a "_www allow execute" ~`
+
 
 
 Modifier
