@@ -124,6 +124,15 @@ default-character-set=utf8mb4
 ```
 
 ## Droits sur les fichiers et répertoires
+
+Sur Mac OSX
+
+```
+sudo chown -R $(whoami):admin /usr/local/*
+&& sudo chmod -R g+rwx /usr/local/*
+```
+
+
 https://doc.ubuntu-fr.org/permissions
 - Fichier : 664
 - Dossier : 770
