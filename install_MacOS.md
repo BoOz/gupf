@@ -167,3 +167,9 @@ du -mks * | sort -rn
 rsync -azv $rep_source/ $rep_destination/
 ```
 
+**Voir les enregistrement DNS d'un domaine**
+
+```
+dig wikipedia.fr ANY
+host wikipedia.fr
+```
