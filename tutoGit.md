@@ -53,6 +53,16 @@ Si on veut effacer les modifs sur un fichier et revenir à l'état de départ
 
 `git checkout -- <fichier>`
 
+## Annuler un commit
+`git reflog` pour en connaitre l'identifiant, exemple `c84cafa`
+
+`git revert c84cafa`
+
+`git push`
+
+
+
+
 ## Branches
 
 - Lister les banches
