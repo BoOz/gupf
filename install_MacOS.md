@@ -173,3 +173,22 @@ rsync -azv $rep_source/ $rep_destination/
 dig wikipedia.fr ANY
 host wikipedia.fr
 ```
+
+**Chercher dans les logs**
+
+`zgrep 154.59.124.74 access-2016*`
+
+
+**copier a travers le réseau**
+
+`scp source/locale/ server.net:`
+
+**screen irssi**
+
+```
+/ screen irssi
+```
+
+puis quitter : ctrl a +d
+
+revenir screen -rd
