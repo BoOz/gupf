@@ -171,6 +171,7 @@ rsync -azv $rep_source/ $rep_destination/
 
 ```
 dig wikipedia.fr ANY
+dig ALL wikipedia.fr
 host wikipedia.fr
 ```
 
