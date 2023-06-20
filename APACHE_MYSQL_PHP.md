@@ -210,6 +210,14 @@ brew services restart mysql
 ```
 
 Relancer apache
+
+```
+sudo /usr/local/bin/apachectl restart
+```
+
+
+ou
+
 ```
 sudo apachectl graceful
 ```
