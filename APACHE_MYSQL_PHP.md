@@ -14,17 +14,17 @@ LoadModule php_module /opt/homebrew/opt/php/lib/httpd/modules/libphp.so "nom du 
 
 Sur les macs > 12 il faut créer un certificat pour signer php : https://www.simplified.guide/macos/apache-php-homebrew-codesign
 
+on délcare aussi quoi faire avec des fichiers PHP
+
 ```
+<IfModule dir_module>
+    DirectoryIndex index.php index.html
+</IfModule>
+
 <FilesMatch \.php$>
-        SetHandler application/x-httpd-php
-    </FilesMatch>
+    SetHandler application/x-httpd-php
+</FilesMatch>
 ```
-
-et aussi :
-
-`chmod +a "_www allow execute" ~`
-
-
 
 Modifier
 ```
@@ -153,6 +153,10 @@ Si vous avez un accès à un disque avec votre user et votre groupe, mais pas ap
 User vincent
 Group staff
 ```
+
+et aussi si on ne change pas le user:
+
+`chmod +a "_www allow execute" ~`
 
 Voir : https://coolestguidesontheplanet.com/set-virtual-hosts-apache-mac-osx-10-10-yosemite/
 
