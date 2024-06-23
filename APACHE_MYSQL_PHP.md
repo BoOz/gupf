@@ -37,6 +37,14 @@ Include /Users/VOTRE_USER/Sites/httpd-vhosts.conf
 
 ```
 
+relancer apache
+
+`sudo apachectl -k restart`
+
+
+
+
+
 Déclarer les vhosts persos dans `/Users/USER/Sites/httpd-vhosts.conf`
 
 Ajouter
