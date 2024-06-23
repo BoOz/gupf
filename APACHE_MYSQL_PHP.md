@@ -14,6 +14,10 @@ LoadModule php_module /opt/homebrew/opt/php/lib/httpd/modules/libphp.so "nom du 
 
 Sur les macs > 12 il faut créer un certificat pour signer php : https://www.simplified.guide/macos/apache-php-homebrew-codesign
 
+ensuite à chaque maj de php on resigne `libphp.so` avec le certificat de signage de code.
+
+`codesign --sign "booz certif" --force --keychain ~/Library/Keychains/login.keychain-db /opt/homebrew/opt/php/lib/httpd/modules/libphp.so`
+
 on délcare aussi quoi faire avec des fichiers PHP
 
 ```
